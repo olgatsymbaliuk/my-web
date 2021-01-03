@@ -1,0 +1,68 @@
+/* ==========================================================================
+		0.Forms
+	========================================================================== */
+
+@include placeholder($default);
+
+input[type="text"], input[type="url"], input[type="email"],
+input[type="tel"], input[type="password"], textarea {
+	background-color: rgba(0,0,0,0.05);
+	@if $legacy-ie {
+		background-color: #efefef;
+	}
+	border: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+	outline: none;
+	width: auto;
+	padding: 1em 0.75em;
+	font-size: 19px;
+	font-size: 1.9rem;
+	font-weight: 400;
+	font-family: Helvetica, Arial, sans-serif;
+	width: 100%;
+	color: $default;
+	@include transition( all, 0.25 );
+}
+
+input[type="submit"], button {
+	-webkit-appearance: none;
+	background-color: transparent;
+	@include font-size(20);
+}
+
+input[type="text"]:hover, input[type="url"]:hover, input[type="email"]:hover,
+input[type="tel"]:hover, input[type="password"]:hover, textarea:hover {
+	color: $default;
+	background-color: rgba(0,0,0,0.09);
+}
+
+input[type="text"]:focus, input[type="url"]:focus, input[type="email"]:focus,
+input[type="tel"]:focus, input[type="password"]:focus, textarea:focus {
+	color: $default;
+	box-shadow: none;
+	background-color: rgba(0,0,0,0.11);
+}
+
+select {
+	width: 100%;
+}
+
+input.searchsubmit,
+input[type="submit"].searchsubmit {
+	display: none;
+}
+
+#form-message-warning, #form-message-success {
+	display: none;
+}
+
+#form-message-warning {
+	color: #B90B0B;
+}
+
+#form-message-success {
+	color: #55A44E;
+	font-size: 16px;
+	font-weight: normal;
+}

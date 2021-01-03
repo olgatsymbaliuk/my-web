@@ -1,0 +1,1083 @@
+/* ==========================================================================
+    13. Shortcodes
+  ========================================================================== */
+
+.one_half, .one_third, .two_third, .one_fourth, .three_fourth, .one_fifth, .two_fifth, .three_fifth, .four_fifth, .one_sixth, .five_sixth {
+  width:100%;
+}
+
+.one_third + .one_third {
+  margin-top: 40px;
+}
+
+.last {
+  margin-right:0 !important;
+  clear:right;
+}
+
+.clearboth {
+  clear: both;
+  display: inline-block;
+  font-size:0;
+  height:0;
+  line-height:0;
+  width:100%;
+}
+
+.clear {
+  clear:both;
+  display:block;
+  width:100%;
+  float: left;
+}
+
+
+
+@include em-min-width(700) {
+
+      .one_half,
+      .one_third,
+      .two_third,
+      .three_fourth,
+      .one_fourth,
+      .one_fifth,
+      .two_fifth,
+      .three_fifth,
+      .four_fifth,
+      .one_sixth,
+      .five_sixth {
+        position:relative;
+        margin-right:4%;
+        float:left;
+      }
+
+      .one_half {
+        width:48%;
+      }
+
+      .one_third {
+        width:30.66%;
+      }
+
+      .one_third + .one_third {
+        margin-top: 0;
+      }
+
+      .two_third {
+        width:65.33%;
+      }
+
+      .one_fourth {
+        width:22%;
+      }
+
+      .three_fourth {
+        width:74%;
+      }
+
+      .one_fifth {
+        width:16.8%;
+      }
+
+      .two_fifth {
+        width:37.6%;
+      }
+
+      .three_fifth {
+        width:58.4%;
+      }
+
+      .four_fifth {
+        width:67.2%;
+      }
+
+      .five_sixth {
+        width:82.67%;
+      }
+
+
+}
+
+
+
+@include em-min-width(1200) {
+
+    .one_sixth {
+        width:13.33%;
+      }
+
+}
+
+
+
+
+.quotemark {
+	text-align: center;
+  font-weight: 700;
+	font-size: 150%;
+	margin-top: 30px;
+	padding: 60px 10px 20px 10px;
+	//background: url(images/icons/quotemark.png) 50% 5px no-repeat;
+  line-height: 1.2;
+  position: relative;
+  color: $accenthover;
+}
+
+.quotemark.white {
+	//background-image: url(images/icons/quotemark-white.png);
+}
+
+.quote-source {
+	margin-top: 2em;
+	font-size: 65%;
+	text-align: right;
+  position: relative;
+
+
+        &:before {
+          content: '—';
+        }
+
+
+}
+
+.quote-rating-1, .quote-rating-2, .quote-rating-3, .quote-rating-4, .quote-rating-5 {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+	margin-top: 0;
+	height: 30px;
+	background: url(images/icons/stars.png) 50% 10px no-repeat;
+}
+
+.quote-rating-4 {
+	background-position: 50% -30px;
+}
+
+.quote-rating-3 {
+	background-position: 50% -70px;
+}
+
+.quote-rating-2 {
+	background-position: 50% -110px;
+}
+
+.quote-rating-1 {
+	background-position: 50% -150px;
+}
+
+.quotemark.white .quote-rating-1, .quotemark.white .quote-rating-2, .quotemark.white .quote-rating-3, .quotemark.white .quote-rating-4, .quotemark.white .quote-rating-5 {
+	background-image: url(images/icons/stars-white.png);
+}
+
+
+img.rounded {
+	border-radius: 50%;
+}
+
+.status,
+.comment-body em,
+.edd_error {
+	display: inline-block;
+  clear: both;
+	width: 100%;
+	padding: 10px;
+	margin: 0.5em 0 1em 0;
+}
+
+.status.oops,
+.edd_error {
+	background: #f9e1e1;
+	border: 2px solid #eec4c4;
+}
+
+.status.less-oops,
+.comment-body em {
+	background: #fde8d9;
+	border: 2px solid #e1c5af;
+}
+
+.status.ok {
+	background: #d2ebd1;
+	border: 2px solid #bad2ba;
+}
+
+.status p {
+	margin: 0.5em 0;
+}
+
+a.btn,
+a.button,
+a.button:visited,
+button,
+input[type="submit"],
+.comment-reply-link,
+.edd-add-to-cart.button, .edd-add-to-cart.white.button,
+.edd_go_to_checkout.button, .edd_go_to_checkout.button.white,
+.edd-submit.button, .edd-submit.button.white {
+	color: $accent !important;
+	padding: 1em 2.5em;
+	text-shadow: none;
+	display: inline-block;
+	text-decoration: none;
+	margin-bottom: 1em;
+  font-weight: 700;
+  text-decoration: none !important;
+  border: 2px solid $accent !important;
+  border-radius: 50px;
+  background-color: transparent;
+  @include font-size(20);
+}
+
+a.button.square {
+	border-radius: 2px;
+}
+
+a.button.large,
+a.btn.large {
+	padding: 20px 70px;
+}
+
+a.button:hover,
+a.btn:hover,
+.comment-reply-link:hover,
+.edd-add-to-cart.button:hover, .edd-add-to-cart.button.white:hover,
+.edd_go_to_checkout.button:hover, .edd_go_to_checkout.button.white:hover,
+.edd-submit.button:hover, .edd-submit.button.white:hover {
+  border-color: $accenthover !important;
+	text-decoration: none;
+	color: $accenthover !important;
+  ;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  text-decoration: none;
+  border-color: $accenthover !important;
+  color: $accenthover !important;
+  background-color: transparent !important;
+}
+
+a.button:active {
+	position: relative;
+	top: 1px;
+}
+
+a.button.grey {
+  border-color: #757c7e !important;
+  color: #757c7e !important;
+}
+
+a.button.grey:hover {
+  border-color: #3e4345 !important;
+  color: #3e4345 !important;
+}
+
+a.button.white {
+  border-color: #fff !important;
+  color: #333 !important;
+}
+
+a.button.white:hover {
+  border-color: #efefef !important;
+  color: #333 !important;
+}
+
+a.button.black {
+  border-color: #333 !important;
+  color: #333 !important;
+}
+
+a.button.black:hover {
+  border-color: #000 !important;
+  color: #000 !important;
+}
+
+a.button.green {
+  border-color: #b3ce7e !important;
+  color: #b3ce7e !important;
+}
+
+a.button.green:hover {
+  border-color: #7e9b47 !important;
+  color: #7e9b47 !important;
+}
+
+a.button.light-blue {
+  border-color: #8aabb5 !important;
+  color: #8aabb5 !important;
+}
+
+a.button.light-blue:hover {
+  border-color: #4b7784 !important;
+  color: #4b7784 !important;
+}
+
+a.button.blue {
+  border-color: #3da1e3 !important;
+  color: #3da1e3 !important;
+}
+
+a.button.blue:hover {
+  border-color: #266476 !important;
+  color: #266476 !important;
+}
+
+a.button.red {
+  border-color: #f77564 !important;
+  color: #f77564 !important;
+}
+
+a.button.red:hover {
+  border-color: #b75548 !important;
+  color: #b75548 !important;
+}
+
+a.button.orange {
+  border-color: #f7a664 !important;
+  color: #f7a664 !important;
+}
+
+a.button.orange:hover {
+  border-color: #cf6916 !important;
+  color: #cf6916 !important;
+}
+
+a.button.purple {
+  border-color: #a18bcf !important;
+  color: #a18bcf !important;
+}
+
+a.button.purple:hover {
+  border-color: #6547a4 !important;
+  color: #6547a4 !important;
+}
+
+a.button.pink {
+  border-color: #e38f8f !important;
+  color: #e38f8f !important;
+}
+
+a.button.pink:hover {
+  border-color: #c76d6d !important;
+  color: #c76d6d !important;
+}
+
+.fh5co-tabs .ui-tabs-hide {
+	position: absolute;
+	left: -99999em;
+}
+
+.fh5co-tabs {
+	background: none;
+	margin: 0 0 2em 0;
+}
+
+.fh5co-tabs ul.nav {
+	list-style: none !important;
+	margin: 0!important;
+	padding: 0 !important;
+	background: none;
+	border: 0;
+	float: none;
+}
+
+.fh5co-tabs ul.nav li {
+	float: left;
+	position: relative;
+	margin: 0 2px -1px 0 !important;
+	z-index: 10;
+	list-style: none !important;
+}
+
+.fh5co-tabs ul.nav li a {
+	border: 1px solid #dfdfdf !important;
+	border-bottom: none !important;
+	display: block;
+	overflow: hidden;
+	padding: 5px 10px 2px 10px;
+	height: 37px;
+	background: #fcfcfc;
+	margin: 0 !important;
+	text-decoration: none;
+	color: #373737 !important;
+	border-radius: 3px 3px 0 0;
+}
+
+.fh5co-tabs ul.nav li a:hover {
+	background: #fff !important;
+	margin: 0 !important;
+}
+
+.fh5co-tabs ul.nav li.tab-active a {
+	min-height: 36px;
+	background: #fff;
+}
+
+.fh5co-tabs .tab {
+	background: #fff;
+	padding: 10px;
+	border: 1px solid #dfdfdf;
+}
+
+.toggle {
+	margin: 0 0 2em 0;
+}
+
+.toggle .toggle-title {
+	display: block;
+	padding: 10px 10px 10px 30px;
+	background: #fcfcfc;
+	border: 1px solid #c5c5c5;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+}
+
+.toggle .toggle-title:hover {
+	border: 1px solid #c5c5c5;
+}
+
+.toggle-inner {
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #c5c5c5;
+	border-top: none;
+}
+
+.toggle .toggle-title:before {
+	content: '';
+	background: url(images/icons/toggle-open.png) no-repeat;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	margin: -6px 0 0 0;
+}
+
+.toggle .toggle-title.active:before {
+	background: url(images/icons/toggle-close.png) no-repeat;
+}
+
+.clearfix:before,
+.clearfix:after { content:""; display:table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom:1; }
+
+.bullets ul li, .bullets ol li {
+	list-style-type: none;
+	background: url(images/icons/tick-green.png) 0 0.5em no-repeat;
+	margin-left: -1em;
+	padding: 0.25em 0 0.25em 1.5em;
+	margin-bottom: 0;
+}
+
+.bullets.green li {
+	background-image: url(images/icons/tick-green.png);
+}
+
+.bullets.red li {
+	background-image: url(images/icons/tick-red.png);
+}
+
+.bullets.black li {
+	background-image: url(images/icons/tick-black.png);
+}
+
+.bullets.light-blue li {
+	background-image: url(images/icons/tick-light-blue.png);
+}
+
+.bullets.blue li {
+	background-image: url(images/icons/tick-blue.png);
+}
+
+.bullets.grey li {
+	background-image: url(images/icons/tick-grey.png);
+}
+
+.bullets.orange li {
+	background-image: url(images/icons/tick-orange.png);
+}
+
+.bullets.pink li {
+	background-image: url(images/icons/tick-pink.png);
+}
+
+.bullets.purple li {
+	background-image: url(images/icons/tick-purple.png);
+}
+
+
+
+
+
+.socials {
+	text-align: center;
+}
+
+a.social {
+	display: inline-block;
+	position: relative;
+	width: 22px;
+	height: 22px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	-o-transition: opacity 0.5s ease-in;
+	-webkit-transition: opacity 0.5s ease-in;
+	-moz-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
+	opacity: 0.2;
+	filter:alpha(opacity=20);
+	text-indent: -9999em;
+	color: rgba(0,0,0,0) !important;
+	font-size: 1px;
+	line-height: 22px;
+	border: none !important;
+}
+
+a.social:hover {
+	-o-transition: opacity 0.25s ease-in;
+	-webkit-transition: opacity 0.25s ease-in;
+	-moz-transition: opacity 0.25s ease-in;
+	transition: opacity 0.25s ease-in;
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+}
+
+a.social:first-of-type {
+	margin-left: 0;
+}
+
+a.social.first {
+	margin-left: 0;
+}
+
+a.social.twitter {
+	background: url(images/icons/social-twitter-black.png) 0 0 no-repeat;
+}
+
+a.social.facebook {
+	background: url(images/icons/social-facebook-black.png) 0 0 no-repeat;
+}
+
+a.social.linkedin {
+	background: url(images/icons/social-linkedin-black.png) 0 0 no-repeat;
+}
+
+a.social.googleplus {
+	background: url(images/icons/social-googleplus-black.png) 0 0 no-repeat;
+}
+
+a.social.vimeo {
+	background: url(images/icons/social-vimeo-black.png) 0 0 no-repeat;
+}
+
+a.social.youtube {
+	background: url(images/icons/social-youtube-black.png) 0 0 no-repeat;
+}
+
+a.social.zerply {
+	background: url(images/icons/social-zerply-black.png) 0 0 no-repeat;
+}
+
+a.social.pinterest {
+	background: url(images/icons/social-pinterest-black.png) 0 0 no-repeat;
+}
+
+a.social.dribbble {
+	background: url(images/icons/social-dribbble-black.png) 0 0 no-repeat;
+}
+
+a.social.github {
+	background: url(images/icons/social-github-black.png) 0 0 no-repeat;
+}
+
+a.social.instagram {
+	background: url(images/icons/social-instagram-black.png) 0 0 no-repeat;
+}
+
+a.social.flickr {
+	background: url(images/icons/social-flickr-black.png) 0 0 no-repeat;
+}
+
+a.social.rss {
+	background: url(images/icons/social-rss-black.png) 0 0 no-repeat;
+}
+
+a.social.adn {
+	background: url(images/icons/social-adn-black.png) 0 0 no-repeat;
+}
+
+a.social.behance {
+	background: url(images/icons/social-behance-black.png) 0 0 no-repeat;
+}
+
+a.social.tumblr {
+	background: url(images/icons/social-tumblr-black.png) 0 0 no-repeat;
+}
+
+a.social.lastfm {
+	background: url(images/icons/social-lastfm-black.png) 0 0 no-repeat;
+}
+
+a.social.xing {
+	background: url(images/icons/social-xing-black.png) 0 0 no-repeat;
+}
+
+a.social.foursquare {
+	background: url(images/icons/social-foursquare-black.png) 0 0 no-repeat;
+}
+
+a.social.mixcloud {
+	background: url(images/icons/social-mixcloud-black.png) 0 0 no-repeat;
+}
+
+a.social.soundcloud {
+	background: url(images/icons/social-soundcloud-black.png) 0 0 no-repeat;
+}
+
+a.social.spotify {
+	background: url(images/icons/social-spotify-black.png) 0 0 no-repeat;
+}
+
+header.header.socials-active.background--dark .socials, header.header.socials-active.background--complex .socials {
+  opacity: 1;
+}
+
+header.header.background--dark a.social, header.header.background--complex a.social {
+  opacity: 0.5;
+}
+
+header.header.background--dark a.social:hover, header.header.background--complex a.social:hover {
+  opacity: 0.8;
+}
+
+a.social.white.twitter, header.header.background--dark a.social.twitter, header.header.background--complex a.social.twitter {
+	background: url(images/icons/social-twitter-white.png) 0 0 no-repeat;
+}
+
+a.social.white.facebook, header.header.background--dark a.social.facebook, header.header.background--complex a.social.facebook  {
+	background: url(images/icons/social-facebook-white.png) 0 0 no-repeat;
+}
+
+a.social.white.linkedin, header.header.background--dark a.social.linkedin, header.header.background--complex a.social.linkedin  {
+	background: url(images/icons/social-linkedin-white.png) 0 0 no-repeat;
+}
+
+a.social.white.googleplus, header.header.background--dark a.social.googleplus, header.header.background--complex a.social.googleplus  {
+	background: url(images/icons/social-googleplus-white.png) 0 0 no-repeat;
+}
+
+a.social.white.vimeo, header.header.background--dark a.social.vimeo, header.header.background--complex a.social.vimeo  {
+	background: url(images/icons/social-vimeo-white.png) 0 0 no-repeat;
+}
+
+a.social.white.youtube, header.header.background--dark a.social.youtube, header.header.background--complex a.social.youtube  {
+	background: url(images/icons/social-youtube-white.png) 0 0 no-repeat;
+}
+
+a.social.white.zerply, header.header.background--dark a.social.zerply, header.header.background--complex a.social.zerply  {
+	background: url(images/icons/social-zerply-white.png) 0 0 no-repeat;
+}
+
+a.social.white.pinterest, header.header.background--dark a.social.pinterest, header.header.background--complex a.social.pinterest  {
+	background: url(images/icons/social-pinterest-white.png) 0 0 no-repeat;
+}
+
+a.social.white.dribbble, header.header.background--dark a.social.dribbble, header.header.background--complex a.social.dribbble  {
+	background: url(images/icons/social-dribbble-white.png) 0 0 no-repeat;
+}
+
+a.social.white.github, header.header.background--dark a.social.github, header.header.background--complex a.social.github  {
+	background: url(images/icons/social-github-white.png) 0 0 no-repeat;
+}
+
+a.social.white.instagram, header.header.background--dark a.social.instagram, header.header.background--complex a.social.instagram {
+	background: url(images/icons/social-instagram-white.png) 0 0 no-repeat;
+}
+
+a.social.white.flickr, header.header.background--dark a.social.flickr, header.header.background--complex a.social.flickr  {
+	background: url(images/icons/social-flickr-white.png) 0 0 no-repeat;
+}
+
+a.social.white.rss, header.header.background--dark a.social.rss, header.header.background--complex a.social.rss  {
+	background: url(images/icons/social-rss-white.png) 0 0 no-repeat;
+}
+
+a.social.white.adn, header.header.background--dark a.social.adn, header.header.background--complex a.social.adn  {
+	background: url(images/icons/social-adn-white.png) 0 0 no-repeat;
+}
+
+a.social.white.behance, header.header.background--dark a.social.behance, header.header.background--complex a.social.behance  {
+	background: url(images/icons/social-behance-white.png) 0 0 no-repeat;
+}
+
+a.social.white.tumblr, header.header.background--dark a.social.tumblr, header.header.background--complex a.social.tumblr  {
+	background: url(images/icons/social-tumblr-white.png) 0 0 no-repeat;
+}
+
+a.social.white.lastfm, header.header.background--dark a.social.lastfm, header.header.background--complex a.social.lastfm  {
+	background: url(images/icons/social-lastfm-white.png) 0 0 no-repeat;
+}
+
+a.social.white.xing, header.header.background--dark a.social.xing, header.header.background--complex a.social.xing  {
+	background: url(images/icons/social-xing-white.png) 0 0 no-repeat;
+}
+
+a.social.white.foursquare, header.header.background--dark a.social.foursquare, header.header.background--complex a.social.foursquare  {
+	background: url(images/icons/social-foursquare-white.png) 0 0 no-repeat;
+}
+
+a.social.white.mixcloud, header.header.background--dark a.social.mixcloud, header.header.background--complex a.social.mixcloud  {
+	background: url(images/icons/social-mixcloud-white.png) 0 0 no-repeat;
+}
+
+a.social.white.soundcloud, header.header.background--dark a.social.soundcloud, header.header.background--complex a.social.soundcloud  {
+	background: url(images/icons/social-soundcloud-white.png) 0 0 no-repeat;
+}
+
+a.social.white.spotify, header.header.background--dark a.social.spotify, header.header.background--complex a.social.spotify  {
+	background: url(images/icons/social-spotify-white.png) 0 0 no-repeat;
+}
+
+
+
+@media only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5/1),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+	#respond-title a:after {
+		background-image: url(images/icons/comment-arrow@2x.png);
+		background-size: 24px 100px;
+	}
+
+	.share a.icon-twitter {
+		background-image: url(images/icons/social-twitter-black@2x.png);
+		background-size: 22px 22px;
+	}
+
+	.share a.icon-facebook {
+		background-image: url(images/icons/social-facebook-black@2x.png);
+		background-size: 22px 22px;
+	}
+
+	.share a.icon-pinterest {
+		background-image: url(images/icons/social-pinterest-black@2x.png);
+		background-size: 22px 22px;
+	}
+
+	.share a.icon-google-plus {
+		background-image: url(images/icons/social-googleplus-black@2x.png);
+		background-size: 22px 22px;
+	}
+
+	a.social.twitter {
+		background: url(images/icons/social-twitter-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.facebook {
+		background: url(images/icons/social-facebook-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.linkedin {
+		background: url(images/icons/social-linkedin-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.googleplus {
+		background: url(images/icons/social-googleplus-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.vimeo {
+		background: url(images/icons/social-vimeo-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.youtube {
+		background: url(images/icons/social-youtube-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.zerply {
+		background: url(images/icons/social-zerply-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.pinterest {
+		background: url(images/icons/social-pinterest-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.dribbble {
+		background: url(images/icons/social-dribbble-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.github {
+		background: url(images/icons/social-github-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.instagram {
+		background: url(images/icons/social-instagram-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.flickr {
+		background: url(images/icons/social-flickr-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.rss {
+		background: url(images/icons/social-rss-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.adn {
+		background: url(images/icons/social-adn-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.behance {
+		background: url(images/icons/social-behance-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.tumblr {
+		background: url(images/icons/social-tumblr-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.lastfm {
+		background: url(images/icons/social-lastfm-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.xing {
+		background: url(images/icons/social-xing-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.foursquare {
+		background: url(images/icons/social-foursquare-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.twitter, header.header.background--dark a.social.twitter, header.header.background--complex a.social.twitter {
+		background: url(images/icons/social-twitter-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.facebook, header.header.background--dark a.social.facebook, header.header.background--complex a.social.facebook  {
+		background: url(images/icons/social-facebook-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.linkedin, header.header.background--dark a.social.linkedin, header.header.background--complex a.social.linkedin  {
+		background: url(images/icons/social-linkedin-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.googleplus, header.header.background--dark a.social.googleplus, header.header.background--complex a.social.googleplus  {
+		background: url(images/icons/social-googleplus-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.vimeo, header.header.background--dark a.social.vimeo, header.header.background--complex a.social.vimeo  {
+		background: url(images/icons/social-vimeo-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.youtube, header.header.background--dark a.social.youtube, header.header.background--complex a.social.youtube  {
+		background: url(images/icons/social-youtube-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.zerply, header.header.background--dark a.social.zerply, header.header.background--complex a.social.zerply  {
+		background: url(images/icons/social-zerply-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.pinterest, header.header.background--dark a.social.pinterest, header.header.background--complex a.social.pinterest  {
+		background: url(images/icons/social-pinterest-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.dribbble, header.header.background--dark a.social.dribbble, header.header.background--complex a.social.dribbble  {
+		background: url(images/icons/social-dribbble-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.github, header.header.background--dark a.social.github, header.header.background--complex a.social.github  {
+		background: url(images/icons/social-github-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.instagram, header.header.background--dark a.social.instagram, header.header.background--complex a.social.instagram {
+		background: url(images/icons/social-instagram-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.flickr, header.header.background--dark a.social.flickr, header.header.background--complex a.social.flickr  {
+		background: url(images/icons/social-flickr-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.rss, header.header.background--dark a.social.rss, header.header.background--complex a.social.rss  {
+		background: url(images/icons/social-rss-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.adn, header.header.background--dark a.social.adn, header.header.background--complex a.social.adn  {
+		background: url(images/icons/social-adn-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.behance, header.header.background--dark a.social.behance, header.header.background--complex a.social.behance  {
+		background: url(images/icons/social-behance-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.tumblr, header.header.background--dark a.social.tumblr, header.header.background--complex a.social.tumblr  {
+		background: url(images/icons/social-tumblr-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.lastfm, header.header.background--dark a.social.lastfm, header.header.background--complex a.social.lastfm  {
+		background: url(images/icons/social-lastfm-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.xing, header.header.background--dark a.social.xing, header.header.background--complex a.social.xing  {
+		background: url(images/icons/social-xing-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.foursquare, header.header.background--dark a.social.foursquare, header.header.background--complex a.social.foursquare  {
+		background: url(images/icons/social-foursquare-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.mixcloud {
+		background: url(images/icons/social-mixcloud-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.soundcloud {
+		background: url(images/icons/social-soundcloud-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.mixcloud, header.header.background--dark a.social.mixcloud, header.header.background--complex a.social.mixcloud  {
+		background: url(images/icons/social-mixcloud-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.soundcloud, header.header.background--dark a.social.soundcloud, header.header.background--complex a.social.soundcloud  {
+		background: url(images/icons/social-soundcloud-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.spotify, header.header.background--dark a.social.spotify, header.header.background--complex a.social.spotify  {
+		background: url(images/icons/social-spotify-black@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.social.white.spotify {
+		background: url(images/icons/social-spotify-white@2x.png) 0 0 no-repeat;
+		background-size: 21px 21px;
+	}
+
+	a.flex-next, a.flex-prev {
+		background-image: url(images/icons/arrows@2x.png);
+		background-size: 200px 13px;
+	}
+
+	a.jp-play span,
+	a.jp-pause span {
+		background-image: url(images/icons/audio@2x.png);
+		background-size: 30px 120px;
+	}
+
+	.quotemark {
+		//background-image: url(images/icons/quotemark@2x.png);
+		background-size: 28px 19px;
+	}
+
+	.quotemark.white {
+		//background-image: url(images/icons/quotemark-white@2x.png);
+	}
+
+	.quote-rating-1, .quote-rating-2, .quote-rating-3, .quote-rating-4, .quote-rating-5 {
+		background-image: url(images/icons/stars@2x.png);
+		background-size: 97px 176px;
+	}
+
+	.quotemark.white .quote-rating-1, .quotemark.white .quote-rating-2, .quotemark.white .quote-rating-3, .quotemark.white .quote-rating-4, .quotemark.white .quote-rating-5 {
+		background-image: url(images/icons/stars-white@2x.png);
+		background-size: 97px 176px;
+	}
+
+	.bullets.green li {
+		background-image: url(images/icons/tick-green@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.bullets.red li {
+		background-image: url(images/icons/tick-red@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.bullets.black li {
+		background-image: url(images/icons/tick-black@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.bullets.light-blue li {
+		background-image: url(images/icons/tick-light-blue@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.bullets.blue li {
+		background-image: url(images/icons/tick-blue@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.bullets.grey li {
+		background-image: url(images/icons/tick-grey@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.bullets.orange li {
+		background-image: url(images/icons/tick-orange@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.bullets.pink li {
+		background-image: url(images/icons/tick-pink@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.bullets.purple li {
+		background-image: url(images/icons/tick-purple@2x.png);
+		background-size: 16px 13px;
+	}
+
+	.toggle .toggle-title:before {
+		background-image: url(images/icons/toggle-open@2x.png);
+		background-size: 12px 12px;
+	}
+
+	.toggle .toggle-title.active:before {
+		background-image: url(images/icons/toggle-close@2x.png);
+		background-size: 12px 12px;
+	}
+
+}

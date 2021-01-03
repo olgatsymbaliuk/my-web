@@ -1,0 +1,97 @@
+/* Fonts */
+body, input[type="text"], input[type="email"], input[type="tel"],
+input[type="url"], input[type="password"], textarea,
+input[type="submit"] {
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+input[type="text"], input[type="url"], input[type="email"], input[type="tel"], input[type="password"], textarea {
+  @include font-size(16);
+}
+
+.home-sticky, .related {
+
+    .post-image {
+      padding: 0 1em;
+
+        img {
+          border-radius: 2000px;
+
+
+        }
+
+    }
+
+}
+
+.hero .hero-inner .inner {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+
+
+.hero {
+
+  h1 {
+    @include font-size(160);
+  }
+
+  .hero-line-one {
+    @include font-size(79);
+  }
+
+  .hero-line-two {
+    @include font-size(51);
+  }
+
+}
+
+.sticky-inner {
+  display: block;
+  margin: 0 auto;
+  max-width: 1680px;
+}
+
+@include em-max-width(700) {
+
+      body.menu-active, body.overlay-active {
+
+          .wrap, .hero, .home-sticky {
+            -webkit-filter: blur(0);
+
+          }
+
+          nav#nav {
+            background-color: rgba(255,255,255,0.95);
+          }
+
+      }
+
+      .js.ios .blur-enabled.menu-active header.header,
+      .js.ios .blur-enabled.overlay-active header.header {
+
+        nav#nav {
+          background-color: rgba(255,255,255,0.95);
+        }
+
+      }
+
+}
+
+/* Text transforms */
+.more-link, .btn,
+h1, h2, h3,
+h4, h5, h6,
+.meta,
+.more-link,
+.band,
+.share-overlay,
+blockquote,
+.url, .comment-date,
+.site-title,
+input[type="submit"],
+header.header nav,
+.site-title {
+  text-transform: uppercase;
+}
